@@ -5,13 +5,13 @@
 class Meibel < Formula
   desc "CLI for interacting with Meibel AI API"
   homepage "https://github.com/meibel-ai/meibel-cli"
-  version "0.1.0-beta.1"
+  version "0.1.0-beta.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.1/meibel_Darwin_x86_64.tar.gz"
-      sha256 "ed0a2c7ee8a4fcd3fd01358d9e8e57ef5c0fec1995c6192595a93a1cbdfb3782"
+      url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.3/meibel_Darwin_x86_64.tar.gz"
+      sha256 "5342d1a439808fb7270807f2a93c2f96b86549c744838fa86b8e3bcbdccbd8e3"
 
       define_method(:install) do
         bin.install "meibel"
@@ -21,8 +21,8 @@ class Meibel < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.1/meibel_Darwin_arm64.tar.gz"
-      sha256 "ad2751355bc6da0b2d3a31c5b1c00ae3b228238832fc8d31a893eee390b0ff4e"
+      url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.3/meibel_Darwin_arm64.tar.gz"
+      sha256 "e1b49dd0f0c24de8f15b4ea7da29ed188af416b941b486c0d46b82cd7a4394f7"
 
       define_method(:install) do
         bin.install "meibel"
@@ -35,8 +35,8 @@ class Meibel < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.1/meibel_Linux_x86_64.tar.gz"
-      sha256 "a20bcbd6cad8e07a58b8469ed5a1437fe4e9e3ab0e1a5e4895f27f33958ca19f"
+      url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.3/meibel_Linux_x86_64.tar.gz"
+      sha256 "cd891b74f7700c07cbf47c145726202393d3bcdd86b201eabb0c38a319a946db"
       define_method(:install) do
         bin.install "meibel"
         bash_completion.install "completions/meibel.bash" => "meibel"
@@ -45,8 +45,8 @@ class Meibel < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.1/meibel_Linux_arm64.tar.gz"
-      sha256 "77152e6119f29ae3d15b6c697ecb7700c2cc497d3a793f7de23a442324a1060a"
+      url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.3/meibel_Linux_arm64.tar.gz"
+      sha256 "ef971b9c7d7a3eb65a5cb1bc4e14e6e44897b26433fb3f92d8cb87af205031c5"
       define_method(:install) do
         bin.install "meibel"
         bash_completion.install "completions/meibel.bash" => "meibel"
