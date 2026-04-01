@@ -11,7 +11,7 @@ class Meibel < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.7/meibel_Darwin_x86_64.tar.gz"
-      sha256 "39db8587d5e527d80928afff009e7de344e46ed2f393016439bfb45e225245f8"
+      sha256 "f2c80af372b57f1818614ea6e328cff7519074e5e37f78d90da6e084b536a987"
 
       define_method(:install) do
         bin.install "meibel"
@@ -22,7 +22,7 @@ class Meibel < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.7/meibel_Darwin_arm64.tar.gz"
-      sha256 "187cf63764a6e0af32bf6aa26649c5fe250ebf44cad4633e0a7233c2cc02b4e6"
+      sha256 "c1b7bd8b9c96175f440d255391c5db52d7dde74eddc197c95709396ecb9537a6"
 
       define_method(:install) do
         bin.install "meibel"
@@ -36,7 +36,7 @@ class Meibel < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.7/meibel_Linux_x86_64.tar.gz"
-      sha256 "53fb58bd2a4c9fd520e0e51280c9b30345f8c419e8842b46401d6ab41c0157e7"
+      sha256 "02670d0ee72e559ef215e274ecb912f6360039426af3d7e2a25a1445befdff80"
       define_method(:install) do
         bin.install "meibel"
         bash_completion.install "completions/meibel.bash" => "meibel"
@@ -46,7 +46,7 @@ class Meibel < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/meibel-ai/meibelai-cli/releases/download/v0.1.0-beta.7/meibel_Linux_arm64.tar.gz"
-      sha256 "7cd9c2dff57f28d14f976de87dd0860486aff27cb2d670d3a3bf8f350d52ff0e"
+      sha256 "060397072c2a7594acf46199f49e695e3a9fb183d6f1ba234fbd5299953a6f11"
       define_method(:install) do
         bin.install "meibel"
         bash_completion.install "completions/meibel.bash" => "meibel"
